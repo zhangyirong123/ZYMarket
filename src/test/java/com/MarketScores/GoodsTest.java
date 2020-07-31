@@ -9,12 +9,13 @@ public class GoodsTest {
 
         //when
         //given
-        Cosnumer consumer = new Consumer();
+        Consumer consumer = new Consumer();
         Goods apple = new Goods("apple");
         consumer.consume(apple, 100);
-        Calculator calculator = new Calculator();
-        int result = calculator.calculate(Consumer.getConsumeRecords());
+        ScoresCalculator calculator = new ScoresCalculator();
+        int result = calculator.calculateScores(consumer.getConsumeRecords());
         //then
+
         Assert.assertEquals(100, result);
     }
 
