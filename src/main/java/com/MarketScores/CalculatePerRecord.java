@@ -10,7 +10,7 @@ public class CalculatePerRecord {
 //        ExtraScoresCalculator extraScoresCalculator = new ExtraScoresCalculator();
 //        return basicScoresCalculator.ScoresCalculator(consumeRecord) + extraScoresCalculator.ScoresCalculator(consumeRecord);
         int result = 0;
-        List<ScoresCalculator> scoresCalculators = new ArrayList<>(Arrays.asList(new BasicScoresCalculator(), new ExtraScoresCalculator()));
+        List<ScoresCalculator> scoresCalculators = new ArrayList<>(Arrays.asList(new BasicScoresCalculator(), new ExtraScoresCalculator(), new UnnecessaryScoresCalculator()));
         for (ScoresCalculator scoresCalculator : scoresCalculators
         ) {
             result += scoresCalculator.ScoresCalculator(consumeRecord);

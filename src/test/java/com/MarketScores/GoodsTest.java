@@ -32,4 +32,18 @@ public class GoodsTest {
 
         Assert.assertEquals(200, result);
     }
+    @Test
+    public void should_return_1067_when_cosume_given_frige_2350() {
+
+        //given
+        Consumer consumer = new Consumer();
+        Goods apple = new Goods("frige");
+        //when
+        consumer.consume(apple, 2350);
+        ScoresTotalCalculator calculator = new ScoresTotalCalculator();
+        int result = calculator.calculateScores(consumer.getConsumeRecords());
+        //then
+
+        Assert.assertEquals(1067, result);
+    }
 }
